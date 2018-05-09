@@ -20,7 +20,7 @@ Do not use this skeleton code for creating production apps. Security and stabili
 That should be enough to get started. Happy tinkering!
 
 
-Who did what: 
+## Who did what: 
 
 CODE: 
 Lidong: Kitchen view HTML/CSS, JS, make the interface of the kitchen ready, connect kitchen to standard drinks’ part, improve the HTML/CSS of DIY part
