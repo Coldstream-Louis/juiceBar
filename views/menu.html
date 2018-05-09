@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Element</title>
+    <link rel="stylesheet" type="text/css" href="css/basic element.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu.css" />
+	<script src="js/menu.js" defer></script>
+</head>
+<body>
+
+<div class="topBar">
+	<h1>THIRSTY</h1>
+	<h2>enjoy your juice and smoothie</h2>
+	<a href="front.html"><img id="back" src="./img/back_arrow.png" /></a>
+	<img id="help" src="./img/help.png" />
+</div>
+
+<main>
+	<div id="window">
+	    <img src="./img/popular.png" alt="Span" title="popular" width="420" height="420" />
+	</div>
+				
+	<div id="table"><table cellspacing="15">
+			<thead>
+				    <tr>    
+						<th onclick="window.open('standard.html', '_self');">
+							<h3>Standard Juice</h3>
+						</th>
+						<th onclick="document.getElementById('pWindow').style.display='block'; sort='juice';">
+							<h3>Customized Juice</h3>
+						</th>
+					<tr>
+		    </thead>
+			<tbody>
+					<tr>
+						<td onclick="window.open('standardsmoothie.html', '_self');">
+							<h3>Standard Smoothie</h3>
+						</td>
+						<td onclick="document.getElementById('pWindow').style.display='block'; sort='smoothie';">
+							<h3>Customized Smoothie</h3>
+						</td>
+				    </tr>
+			</tbody>
+    </table></div>
+</main>
+
+<section id="popup">
+	<div id="pWindow">
+		<h1>Choose the size for your customized drink</h1>
+		<img src="./img/Glass.png" id="small" onclick="gonext('S')"/>
+		<img src="./img/Glass.png" id="medium" onclick="gonext('M')"/>
+		<img src="./img/Glass.png" id="large" onclick="gonext('L')"/>
+		<p style="left:18.5%">Small</p>
+		<p style="left:44%">Medium</p>
+		<p style="left:75.5%">Large</p>
+		<button id="cancel" onclick="document.getElementById('pWindow').style.display='none';">Cancel</button>
+	</div>
+</section>
+</body>
+</html>

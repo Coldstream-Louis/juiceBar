@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitchen</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/vue/vue.js" defer></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/juicifer-main.js" defer></script>
+    <script src="js/kitchen.js" defer></script>
+</head>
+<body>
+    <div class="topBar">
+        <h1>THIRSTY</h1>
+        <h2>kitchen view</h2>
+    </div>
+    <div id="main">
+        <div id="left">
+            <div id="order_overview">
+                <div class="order_unit" v-for="(items, key) in orders" v-if="!items.done" v-bind:class="key" v-on:mousedown= "enter(key)">
+                    <h3>Order{{key}}</h3>
+                    <div id="order_body">
+                        <table>
+                            <tbody>
+                            <tr v-for="item in items.order">
+                                <td>
+                                    <b>{{item.name}}</b>
+                                </td>
+                                <td align="right">
+                                    {{item.size}}
+                                </td>
+                                <td align="right">
+                                    {{item.account}}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <div id="detailed_order">
+                <h3><span>Order<br></span>{{ID}}</h3>
+                <hr>
+                <div id="order_table">
+                    <div id="table_row" v-for="item in order.order">
+                        <div id="left_column">
+                            <b>{{item.name}}</b>
+                            <ul v-for="ingredient in item.ingredient" v-if="item.ingredient.length">
+                                <li>{{ingredients[ingredient]}}</li>
+                            </ul>
+                        </div>
+                        <div id="right_column">
+                            <div>
+                                {{item.size}}
+                            </div>
+                            <div align="right">
+                                {{item.account}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="finished_button" v-on:click="finish()"></div>
+        </div>
+    </div>
+</body>
+</html>

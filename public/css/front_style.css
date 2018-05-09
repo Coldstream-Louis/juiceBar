@@ -1,0 +1,102 @@
+body{
+    background-image: url("../img/juice.jpeg");
+    background-size: 45em 45em;
+    background-repeat:no-repeat;
+    background-position: 90% 10%;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: "Helvetica Neue";
+    width: 100%;
+}
+
+h1{
+    letter-spacing: 0.2em;
+    font-size: 5em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+
+h3{
+    letter-spacing: 0.2em;
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+#main{
+    margin: 5em 10%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#language{
+    width: 14em;
+    height:6em;
+    display: flex;
+    align-items: center;
+    border-color: #ffc107;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5px;
+    margin:1em 0;
+}
+
+#sweden_flag,#uk_flag{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sweden_flag,#uk_flag:hover{cursor: pointer;}
+
+#uk_flag{
+    background-color: #ffc107;
+}
+
+#sweden_flag{
+    background-color: #ffffff;
+}
+
+#sweden_flag:checked{
+    background-color: #ffc107;
+}
+
+#welcome_intro{
+    width: 60%;
+}
+
+#enter_button{
+    width: 10em;
+    height: 2em;
+    border: none;
+    outline: none;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2.5em;
+    font-family: Helvetica Neue;
+    border-radius: 5px;
+    background-color: #ffc107;
+    color: #fff;
+}
+#enter_button:hover{cursor: pointer; background: #FFA000}
+
+#payment_image{
+    width: 16em;
+}
+
+@media screen and (max-width: 850px){
+   #language {width: 7.84em; height:3.36em;}
+   #enter_button {font-size: .75em; width: 10em; height: 3em;}
+   #payment_image {width: 6em;}
+   #main {align-items: center;}
+   h1 {font-size: 2.5em;}
+   h3 {font-size: 1.2em;}
+   body { background-size: 28em 28em; background-position: 50% 90%;}
+   #welcome_intro{text-align: center;}
+}

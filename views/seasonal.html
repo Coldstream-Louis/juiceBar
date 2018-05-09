@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Element</title>
+	<link rel="stylesheet" type="text/css" href="css/basic element.css" />
+	<link rel="stylesheet" type="text/css" href="css/standard.css" />
+	<script src="/vue/vue.js" defer></script>
+	<script src="/socket.io/socket.io.js" defer></script>
+	<script src="js/data.js" defer></script>
+	<script src="js/juicifer-main.js" defer></script>
+	<script src="js/standardOrder.js" defer></script>
+</head>
+<body>
+	<main>
+	<div class="topBar">
+		<a href="menu.html"><img id="back" src="./img/back_arrow.png" /></a>
+		<table id="menubar" cellspacing="15">
+			<thead>
+				    <tr>
+						<th onclick="window.open('standard.html', '_self');"><h3>Standard Juice</h3></th>
+						<th onclick="window.open('standardsmoothie.html', '_self');"><h3>Standard Smoothie</h3></th>
+						<th style="background:#FFA000;" onclick="window.open('seasonal.html', '_self');"><h3>Seasonal Selected</h3></th>
+						<th onclick="window.open('top.html', '_self');"><h3>Top 10 Popular</h3></th>
+					</tr>
+		    </thead>
+    </table></div>
+		<img id="help" src="./img/help.png" />
+	
+				
+	<table id="table1" cellspacing="15">
+			<thead>
+				    <tr>    
+						<th onclick="Popup(13);"><img id="13" src="./img/s_1.png" width="80" height="120"><h3>Berry Smoothie</h3><p>Starting price 30kr</p></th>
+						<th onclick="Popup(14);"><img id="14" src="./img/s_2.png" width="80" height="120"><h3>Mango Smoothie</h3><p>Starting price 25kr</p></th>
+						<th onclick="Popup(15);"><img id="15" src="./img/s_3.png" width="80" height="120"><h3>Green Smoothie</h3><p>Starting price 35kr</p></th>
+						<th onclick="Popup(16);"><img id="16" src="./img/s_7.png" width="80" height="120"><h3>Nektar Smoothie</h3><p>Starting price 25kr</p></th>
+						<th onclick="Popup(17);"><img id="17" src="./img/s_8.png" width="80" height="120"><h3>Purple Smoothie</h3><p>Starting price 30kr</p></th>
+						<th onclick="Popup(18);"><img id="18" src="./img/s_9.png" width="80" height="120"><h3>Health Smoothie</h3><p>Starting price 20kr</p></th>
+					<tr>
+		    </thead>
+			<tbody>
+					<tr>
+					    <td onclick="Popup(7);"><img id="7" src="./img/juice_4.png" width="80" height="120"><h3>Orange Juice</h3><p><b>Starting price 30kr</b></p></td>
+						<td onclick="Popup(8);"><img id="8" src="./img/juice_5.png" width="80" height="120"><h3>Apple Juice</h3><p><b>Starting price 32kr</b></p></td>
+						<td onclick="Popup(9);"><img id="9" src="./img/juice_6.png" width="80" height="120"><h3>Carrot Juice</h3><p><b>Starting price 24kr</b></p></td>
+						<td onclick="Popup(10);"><img id="10" src="./img/juice_10.png" width="80" height="120"><h3>Berry Juice</h3><p><b>Starting price 34kr</b></p></td>
+						<td onclick="Popup(11);"><img id="11" src="./img/juice_11.png" width="80" height="120"><h3>Citrus Juice</h3><p><b>Starting price 20kr</b></p></td>
+						<td onclick="Popup(12);"><img id="12" src="./img/juice_12.png" width="80" height="120"><h3>Red Juice</h3><p><b>Starting price 30kr</b></p></td>
+				    </tr>
+			</tbody>
+    </table>
+
+
+		<div class="cart">
+			<div class="nameBar">
+				<h4>Shopping Cart</h4>
+			</div>
+			<p id="ordered"></p>
+		</div>
+
+		<button id="buy" v-on:click="placeOrder()">Purchase</button>
+
+		<section id="popup">
+			<div id="pWindow">
+				<img id="drink" />
+				<h1 id="dName">X Juice</h1>
+				<p id="i_1">ingredient1</p>
+				<p id="i_2">ingredient2</p>
+				<p id="i_3">ingredient3</p>
+				<p id="i_4">ingredient4</p>
+				<p id="pS" style="margin-left: 25%; margin-top: 40px; ">Small:</p>
+				<p id="pM" style="margin-left: 25%; ">Medium:</p>
+				<p id="pL" style="margin-left: 25%; ">Large:</p>
+				<button class="order" style="top:280px;" onclick="orderDrink(current, 'S');">order</button>
+				<button class="order" style="top:320px;" onclick="orderDrink(current, 'M');">order</button>
+				<button class="order" style="top:360px;" onclick="orderDrink(current, 'L');">order</button>
+				<button id="cancel" onclick="document.getElementById('pWindow').style.display='none';">Cancel</button>
+			</div>
+		</section>
+
+	
+	</main>
+</body>
+</html>

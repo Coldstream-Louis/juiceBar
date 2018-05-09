@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Element</title>
+	<link rel="stylesheet" type="text/css" href="css/basic element.css" />
+	<link rel="stylesheet" type="text/css" href="css/standard.css" />
+	<script src="/vue/vue.js" defer></script>
+	<script src="/socket.io/socket.io.js" defer></script>
+	<script src="js/data.js" defer></script>
+	<script src="js/juicifer-main.js" defer></script>
+	<script src="js/standardOrder.js" defer></script>
+</head>
+<body>
+	<main>
+	<div class="topBar">
+		<a href="menu.html"><img id="back" src="./img/back_arrow.png" /></a>
+		<table id="menubar" cellspacing="15">
+			<thead>
+				    <tr>
+						<th onclick="window.open('standard.html', '_self');"><h3>Standard Juice</h3></th>
+						<th onclick="window.open('standardsmoothie.html', '_self');"><h3>Standard Smoothie</h3></th>
+						<th onclick="window.open('seasonal.html', '_self');"><h3>Seasonal Selected</h3></th>
+						<th style="background:#FFA000;" onclick="window.open('top.html', '_self');"><h3>Top 10 Popular</h3></th>
+					</tr>
+		    </thead>
+    </table></div>
+		<img id="help" src="./img/help.png" />
+	
+				
+	<table id="table1" cellspacing="15">
+			<thead>
+				    <tr>    
+						<th onclick="Popup(1);"><img id="1" src="./img/juice_1.png" width="80" height="120"><h3>Pineapple Juice</h3><p>Starting price 30kr</p></th>
+						<th onclick="Popup(2);"><img id="2" src="./img/juice_2.png" width="80" height="120"><h3>Tomato Juice</h3><p>Starting price 25kr</p></th>
+						<th onclick="Popup(3);"><img id="3" src="./img/juice_3.png" width="80" height="120"><h3>Green Juice</h3><p>Starting price 35kr</p></th>
+						<th onclick="Popup(4);"><img id="4" src="./img/juice_7.png" width="80" height="120"><h3>Grande Juice</h3><p>Starting price 25kr</p></th>
+						<th onclick="Popup(5);"><img id="5" src="./img/juice_8.png" width="80" height="120"><h3>Papaya Juice</h3><p>Starting price 30kr</p></th>
+					<tr>
+		    </thead>
+			<tbody>
+					<tr>
+					    <td onclick="Popup(19);"><img id="19" src="./img/s_4.png" width="80" height="120"><h3>Classic Smoothie</h3><p><b>Starting price 30kr</b></p></td>
+						<td onclick="Popup(20);"><img id="20" src="./img/s_5.png" width="80" height="120"><h3>Fresh Smoothie</h3><p><b>Starting price 32kr</b></p></td>
+						<td onclick="Popup(21);"><img id="21" src="./img/s_6.png" width="80" height="120"><h3>Passion Smoothie</h3><p><b>Starting price 24kr</b></p></td>
+						<td onclick="Popup(22);"><img id="22" src="./img/s_10.png" width="80" height="120"><h3>Citrus Smoothie</h3><p><b>Starting price 34kr</b></p></td>
+						<td onclick="Popup(23);"><img id="23" src="./img/s_11.png" width="80" height="120"><h3>Thirsy Smoothie</h3><p><b>Starting price 20kr</b></p></td>
+				    </tr>
+			</tbody>
+    </table>
+
+
+
+		<div class="cart">
+			<div class="nameBar">
+				<h4>Shopping Cart</h4>
+			</div>
+			<p id="ordered"></p>
+		</div>
+
+		<button id="buy" v-on:click="placeOrder()">Purchase</button>
+
+		<section id="popup">
+			<div id="pWindow">
+				<img id="drink" />
+				<h1 id="dName">X Juice</h1>
+				<p id="i_1">ingredient1</p>
+				<p id="i_2">ingredient2</p>
+				<p id="i_3">ingredient3</p>
+				<p id="i_4">ingredient4</p>
+				<p id="pS" style="margin-left: 25%; margin-top: 40px; ">Small:</p>
+				<p id="pM" style="margin-left: 25%; ">Medium:</p>
+				<p id="pL" style="margin-left: 25%; ">Large:</p>
+				<button class="order" style="top:280px;" onclick="orderDrink(current, 'S');">order</button>
+				<button class="order" style="top:320px;" onclick="orderDrink(current, 'M');">order</button>
+				<button class="order" style="top:360px;" onclick="orderDrink(current, 'L');">order</button>
+				<button id="cancel" onclick="document.getElementById('pWindow').style.display='none';">Cancel</button>
+			</div>
+		</section>
+ 
+	
+
+
+	
+	</main>
+</body>
+</html>

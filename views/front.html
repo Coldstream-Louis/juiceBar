@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Front</title>
+    <link rel="stylesheet" type="text/css" href="../css/front_style.css" />
+    <script src="../js/front_page.js" defer></script>
+    <script src="https://vuejs.org/js/vue.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="language">
+            <div id="sweden_flag" onclick="changeBackground(this)">
+                <img class="flag_image" src="../img/SW.png" width="80%">
+            </div>
+            <div id="uk_flag" onclick="changeBackground(this)">
+                <img class="flag_image" src="../img/UK.png" width="80%">
+            </div>
+        </div>
+        <div id="welcome_intro">
+            <h1>THIRSTY</h1><br>
+            <h3>enjoy your juice and smoothie</h3>
+        </div>
+        <button id="enter_button" onclick="window.open('menu.html', '_self');">Start your order</button><br>
+        <img id = "payment_image" src="../img/cccards.png" width="30%">
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Shop Menu</title>
+	<link rel="stylesheet" type="text/css" href="css/diy.css" />
+	<link rel="stylesheet" type="text/css" href="css/basic element.css" />
+	<script src="/vue/vue.js" defer></script>
+	<script src="/socket.io/socket.io.js" defer></script>
+	<script src="js/data.js" defer></script>
+	<script src="js/juicifer-main.js" defer></script>
+	<script src="js/diy.js" defer></script>
+</head>
+<body>
+<div class="topBar">
+	<h1>THIRSTY</h1>
+	<h2>Make your own juice</h2>
+	<img id="back" src="img/back_arrow.png" v-on:click="backConfirmation()"/>
+	<img id="help" src="img/help.png" v-on:click="askHelp()"/>
+</div>
+<main id="mainid">
+	<div id="left">
+		<table class="categorytable">
+			<tbody>
+			<tr>
+				<td @click="changeSort('liquids')" ref="liquids">Liquids</td>
+				<td @click="changeSort('fruit')" ref="fruit">Fruit</td>
+				<td @click="changeSort('veggies')" ref="veggies">Veggies</td>
+				<td @click="changeSort('other')" ref="other">Other</td>
+			</tr>
+			</tbody>
+		</table>
+		<div id="ingredientlist">
+			<h2>Choose an ingredient:</h2>
+			<ingredient class="ingredientcontent"
+						ref="ingredient"
+						v-for="item in DIYIngredients"
+						v-if="item.category==ingredientSort && (item.type==drinkSort || item.type=='both')"
+						v-on:choose="addToChosen(item, drinkSort)"
+						:item="item"
+						:lang="lang"
+						:key="item.ingredient_id">
+			</ingredient>
+		</div>
+
+		<div id="sizeChangePopup" v-if="showChangePopup" class="popup">
+			<span v-html="changeMessage"></span>
+			<button v-if="showChangePopupLarge" @click="popupChangeLarge()">LARGE</button>
+			<button v-if="showChangePopupMedium" @click="popupChangeMedium()">MEDIUM</button>
+			<button @click="popupChangeCancel()">CANCEL</button>
+		</div>
+
+		<div id="removePopup" v-if="showRemovePopup" class="popup">
+			<span v-html="removeMessage"></span>
+			<button @click="popupRemoveCancel()">CANCEL</button>
+			<button @click="popupRemoveOk()">REMOVE</button>
+		</div>
+	</div>
+	<div id="middle">
+		<div class="glass">
+			<img v-bind:src="getGlassPath()"  id="glass_img">
+		</div>
+		<div id="chosentestdiv">
+			<table id="choicetable">
+				<tbody>
+				<tr >
+					<td v-for="(image, index) in new Array(5)">
+						<img :src="index < chosenIngredients.length ? getImagePath(chosenIngredients[index]) : 'img/substitute.png'" id="choiceimage" @click="openRemovePopup(index)">
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<button class="add" @click="addToOrder" >add to cart </button>
+	</div>
+	<div id="cart">
+		<div id="cart_top">
+			<h2>Cart</h2>
+			<div id="cart_content">
+				<span v-if=isEmpty v-html="emptyCartMessage"></span>
+				<div id="order_content" v-if=!isEmpty v-for="(drink,index) in drinks">Nr. {{index}}: {{ drink.ingredients.map(item => item["ingredient_"+lang]).join(', ') }}, {{drink.price}} kr
+				</div>
+			</div>
+		</div>
+		<button id="order_button" type="button" @click="placeOrder();">ORDER</button>
+	</div>
+</main>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,226 @@
+body{
+	font-family: "Helvetica Neue";
+}
+
+table#table1{
+    margin: 100px 40px 1px;
+	float: left;
+	
+}
+
+table#menubar{
+	float: left;
+	margin: 0px 120px 1px;
+}
+
+
+table#menubar th {
+	background-color: transparent;
+	font-size:1.25em;
+	color: #FFFFFF;
+	font-family: "Helvetica Neue";
+}
+
+table#table1 p {
+	color: #000000;
+	font-size:0.8em;
+}
+
+table#table1 p {
+	color: #000000;
+	font-size:0.8em;
+
+}
+
+table#table1 thead p {
+	color: #000000;
+	font-size:0.8em;
+}
+
+table#table1 h3 {
+	font-family: "Helvetica Neue";
+	text-align: center;
+	font-size:1em;
+	color: #000000;
+}
+
+table#table1 th, td {
+	background-color: #FFFFFF;
+	width: 120px;
+	height: 200px;
+	text-align:center;
+}
+
+.cart {
+	float: right;
+	border: 2px solid #ffc107;
+	top:140px;
+	left:900px;
+	position: absolute;
+	text-align: left;
+	font-size: 1.6em;
+	width: 340px;
+	height: 340px;
+	padding: 0;
+}
+
+.nameBar{
+	width: 340px;
+	height:60px;
+	background: #ffc107;
+	position: absolute;
+}
+.nameBar h4{
+	margin: 10px 0 0 10px;
+	color: white;
+}
+
+#ordered{
+    margin: 4em 0 0 1em;
+    font-size:0.7em;
+    letter-spacing: 0.2em;
+}
+
+#button {
+	background-color: #FFA000;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+	float: right;
+	margin: 25px 60px 10px;
+	color: #FFFFFF;
+	font-size:1.8em;
+	width: 100px;
+	height: 27px;
+}
+a{
+	text-align: center;
+}
+a:link {
+    color: #FFFFFF;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: #FFFFFF;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: #FFFFFF;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:active {
+    color: #FFFFFF;
+    background-color: transparent;
+    text-decoration: none;
+}
+#table1 th:hover {
+    color: #FFFFFF;
+    background-color: #FFA000;
+    cursor: pointer;
+}
+#table1 td:hover {
+    color: #FFFFFF;
+    background-color: #FFA000;
+    cursor: pointer;
+}
+
+#menubar th:hover {
+    color: #000000;
+    background-color: #FFA000;
+    text-decoration: none;
+}
+
+#menubar td:hover {
+    color: #000000;
+    background-color: #FFA000;
+    text-decoration: none;
+}
+
+#buy{
+	left: 1000px;
+	top: 500px;
+	position: absolute;
+	width: 150px;
+	height: 70px;
+	font-size: 2em;
+	text-align: center;
+	border: none;
+	color: #FFFFFF;
+	background: #ffc107;
+}
+
+#buy:hover {
+    background-color: #FFA000;
+    text-decoration: none;
+	cursor: pointer;
+}
+
+#pWindow {
+    margin:0;
+    position: absolute;
+    width:40%;
+    left:30%;
+    height:500px;
+    top:100px;
+    background: darkslategrey;
+    opacity: 0.8;
+    text-align: center;
+    display: none;
+}
+
+#pWindow h1{
+    color:white;
+    font-size: 1.8em;
+    font-weight: 200;
+    font-family: "Helvetica Neue";
+    text-align: left;
+    margin: 50px 0 0 270px;
+}
+
+#pWindow p{
+    font-size: 1.2em;
+    font-weight: 200;
+    font-family: "Helvetica Neue";
+    color: white;
+    margin: 14px 0 0 270px;
+    text-align: left;
+    width:auto;
+}
+
+#drink{
+    width:30%;
+    height:40%;
+    left:10%;
+    top:10%;
+    position: absolute;
+}
+
+#cancel{
+    margin: 60px 0;
+    border-radius: 0;
+    border: none;
+    width: 25%;
+    height: 40px;
+    color: white;
+    font-size: 1.5em;
+    background: orangered;
+}
+
+.order{
+    position: absolute;
+    left: 300px;
+    border-radius: 0;
+    border: none;
+    width: 20%;
+    height: 30px;
+    color: white;
+    font-size: 1.2em;
+    background: #FFA000;
+}
+.order:hover{cursor: pointer; background: darkorange}
+#cancel:hover{cursor: pointer; background: red}

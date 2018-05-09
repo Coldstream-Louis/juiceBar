@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Element</title>
+    <link rel="stylesheet" type="text/css" href="css/yourCart element.css" />
+    <script src="js/data.js" defer></script>
+    <script src="js/standardOrder.js" defer></script>
+</head>
+<body>
+<div class="topBar">
+    <h1>THIRSTY</h1>
+    <h2>enjoy your juice and smoothie</h2>
+    <img id="back" src="./img/back_arrow.png" onclick="window.open('menu.html', '_self');" />
+    <img id="help" src="./img/help.png" onclick="init();"/>
+</div>
+
+<div>
+    <table class="shoppingList" >
+        <tr class="firstLine">
+            <th class="c1" style="text-align: left; font-size: 24px;">Type Name</th>
+            <th class="c2" style="text-align: center; font-size: 24px;">Size</th>
+            <th class="c3" style="text-align: center; font-size: 24px;">Account</th>
+            <th class="c4" style="text-align: right; font-size: 24px;">Price</th>
+        </tr>
+    </table>
+
+    <button class="cancelBar">Cancel</button>
+    <button class="payBar" onclick="window.open('successfulPayment.html', '_self');">Pay</button>
+</div>
+
+</body>
+</html>

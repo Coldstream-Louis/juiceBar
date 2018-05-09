@@ -1,0 +1,61 @@
+ingredient_id,ingredient_sv,ingredient_en,vol_smoothie,vol_juice,selling_price,category,type
+1,banan, banana,80,0,8,fruit,both
+2,citron,lemon,40,30,8,fruit,both
+3,lime,lime,30,20,8,fruit,both
+4,apelsin,orange,100,80,7,fruit,both
+5,kaffe,coffee,50,50,5,liquids,juice
+6,vanilla ice cream,vanilla ice cream,50,50,5,other,smoothie
+7,sodavatten,soda water,50,50,4,liquids,both
+8,vatten,water,50,50,0,liquids,both
+9,is,ice,50,50,1,other,both
+10,guava,guava,10,10,10,veggies,both
+11,grönkål,kale,50,20,5,veggies,both
+12,morot,carrot,50,30,5,veggies,both
+13,ingefära,ginger,10,5,5,other,both
+14,chili,chili,5,5,5,other,both
+15,kanel,cinnamon,1,1,1,other,both
+16,kakao,cocoa,10,10,5,other,both
+17,äpple,apple,100,60,8,fruit,both
+18,päron,pear,100,0,10,fruit,both
+19,ananas,pineapple,100,80,12,fruit,both
+20,katrinplommon,prune,20,0,3,fruit,both
+21,blåbär,blueberry,30,30,5,fruit,both
+22,hallon,raspberry,30,30,5,fruit,both
+23,jordgubbe,strawberry,30,30,5,fruit,both
+24,pumpa,pumpkin,50,0,7,veggies,both
+25,selleri,celery,20,0,3,veggies,both
+26,mango,mango,100,0,20,fruit,both
+27,grapefrukt,grapefruit,200,170,17,fruit,both
+28,druva,grape,50,50,12,fruit,both
+29,spenat,spinach,50,0,9,veggies,both
+30,rödbeta,beet,100,0,5,veggies,both
+31,mjölk,milk,50,50,5,liquids,both
+32,sojadryck,soy milk,50,50,7,liquids,both
+33,havredryck,oat milk,50,50,7,liquids,both
+34,kokosmjölk,coconut milk,50,50,8,liquids,both
+35,mandelmjölk,almond milk,50,50,12,liquids,both
+36,kokosnöt,coconut,20,20,15,fruit,both
+37,mynta,mint leaves,10,10,5,other,both
+38,chiafrön,chia seeds,20,0,10,other,smoothie
+39,cashewnötter,cashew nuts,20,0,15,other,smoothie
+40,valnötter,walnut,20,0,15,other,smoothie
+41,mandel,almond,20,0,15,other,smoothie
+42,hasselnötter,hazelnut,20,0,15,other,smoothie
+43,broccoli,broccoli,50,0,8,veggies,smoothie
+44,blomkål,cauliflower,50,0,8,veggies,smoothie
+45,honung,honey,10,10,4,other,both
+46,socker,sugar,10,10,1,other,both
+47,jordnötssmör,peanut butter,25,0,5,other,smoothie
+48,kiwi,kiwi,60,0,6,fruit,both
+49,russin,raisins,20,0,3,fruit,both
+50,dadlar,dates,20,0,3,fruit,both
+51,avocado,avocado,100,0,15,veggies,both
+52,linfrön,flax seeds,20,0,10,other,smoothie
+53,tomat,tomato,50,0,4,veggies,both
+54,keso,cottage cheese,25,0,2,other,both
+55,spirulina,spirulina,10,10,4,other,both
+56,tabasco,tabasco,5,5,3,other,both
+57,proteinpulver av vassle,whey protein powder,20,20,5,other,smoothie
+58,veganskt proteinpulver,vegan protein powder,20,20,5,other,smoothie
+59,yoghurt,yoghurt,50,50,7,other,smoothie
+60,ägg,egg,45,45,5,other,smoothie

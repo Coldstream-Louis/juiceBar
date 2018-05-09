@@ -1,0 +1,306 @@
+body{
+	width:100%;
+	height:100%;
+}
+
+main{
+    font-family: "Helvetica Neue";
+    background: #ffc107;
+    height: 40em;
+    width: 100%;
+    text-align:center;
+    margin-top: 6em;
+    background-color: #FFF;
+    /*position: absolute;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main h1{
+    letter-spacing: 0.4em;
+    font-size: 2em;
+    color: #FFFFFF;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+main h2{
+    letter-spacing: 0.2em;
+    font-size: 1em;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-top: 0;
+    background-color:#FFA000; 
+}
+
+#left{
+	margin-top:3em;
+	width: 30em;
+}
+
+#middle{
+	display: flex;
+	width: 25em;
+	margin-top:3em;
+	flex-direction: column;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+
+table.categorytable{
+	height: 6em;
+}
+
+table.categorytable td{
+	width: 6em;
+    height: 6em;
+    color: white;
+    text-align:center;
+    font-weight: bold;
+	background:#FFA000;
+	border-radius: .5em;
+}
+
+#cart{
+	margin-top: 3em;
+	width:10em;
+	color: #FFFFFF;
+	background:#ffc107;
+	width: 10em;
+	font-size:1.8em;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: .3em;
+}
+
+#ingredientlist{
+	width:27em;
+	height:30em;
+	background:#FFA000;
+	/*text-align:center;*/
+	overflow:scroll;
+	border-radius: .5em;
+}
+
+
+#glass_img{
+	width:21em;
+    height: 23em;
+}
+
+.glass{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin:2em 0;
+}
+
+#sizeChangePopup{
+	top:10em;
+}
+
+#ingredients{
+	background:#ffc107;
+	border: 1px solid #cdc;
+}
+
+#ingredientlist h2{
+	background:#ffc107;
+	width: 60%;
+	height: 3em;
+	margin: 0 20% 1em;
+	font-size: 1.5em;
+	border-radius: 0 0 .5em .5em;
+	/*border: 1px solid #cdc;*/
+}
+
+#chosentestdiv{
+
+	width: 16em;
+	height: 3em;
+	margin: 1em 0;
+}
+
+#choiceimage{
+	position: static;
+	width:3em;
+	height:3em;
+}
+
+#cart h2{
+	background-color: #FFA000;
+	width: 60%;
+	border-radius: 0 0 .3em .3em;
+	height: 1.5em;
+	margin-bottom: 1em;
+	/*justify-content: flex-start;*/
+}
+
+#cart_top{
+	height: 80%;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	overflow: scroll;
+}
+
+#cart_content{
+	overflow: scroll;
+	width: 100%;
+}
+
+#order_content{
+	font-size: 1em;
+	text-align: left;
+	width: 100%;
+}
+
+#order_button{
+	width: 60%;
+	height: 3em;
+	border-radius: .5em .5em 0 0;
+	border: none;
+	color: white;
+	background-color: #FFA000;
+	font-size: .8em;
+	letter-spacing: .3em;
+	font-weight: bolder;
+}
+
+.add{
+	/*position:fixed;*/
+	/*margin-top: -250px;*/
+	/*margin-left: -90px;*/
+	width: 8em;
+	height: 3em;
+	font-family: "Helvetica Neue";
+	color:#FFFFFF;
+	text-align: center;
+	font-size:1.4em;
+    font-weight: bold;
+	background-color: #FFA000;
+    /*padding: 15px 32px;*/
+    text-align: center;
+    margin-bottom: -5em;
+    border: none;
+    border-radius: .5em;
+    /*cursor: pointer;*/
+}
+.popup{
+	position:fixed;
+	margin-top: -250px;
+	margin-left: -90px;
+	font-family: "Helvetica Neue";
+	color:#FFFFFF;
+	text-align: center;
+	font-size:1.4em;
+    font-weight: bold;
+	background-color: #FFA000;
+    padding: 15px 32px;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media (max-width:1200px){
+#cart{
+	width: 100%;
+	height: 10em;
+	margin: 1em 0 0;
+	border-radius: 0;
+}
+
+#order_content{
+	/*font-size: 1em;*/
+	text-align: center;
+	/*width: 80%;*/
+}
+
+#back{
+    width:0,8em;
+    height: 2em;
+    left: 0.1em;
+    top: 2em;
+    position: absolute;
+}
+
+#help{
+    width:1em;
+    height: 1em;
+    right: 2em;
+    top: 1em;
+    position: absolute;
+ }
+
+ @media (max-width: 900px){
+ 	#left{
+	width: 20em;
+	}
+
+	#left h2{
+		font-size: 1em;
+	}
+
+	#ingredientlist{
+		width:17em;
+	}
+
+	#middle{
+		
+		width: 10em;
+		
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+	table.categorytable{
+		height: 5em;
+	}
+
+	table.categorytable td{
+		width: 5em;
+    	height: 5em;
+    	/*font-size: .5em;*/
+    }
+    
+    #glass_img{
+		width:8em;
+    	height: 8em;
+		}
+
+	.glass{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin:2em 0;
+	}
+
+
+	#choiceimage{
+	position: static;
+	width:1.5em;
+	height:1.5em;
+	}
+
+	#chosentestdiv{
+
+	width: 8em;
+	height: 3em;
+	margin: 0;
+	}
+
+    /*color: white;
+    text-align:center;
+    font-weight: bold;
+	background:#FFA000;
+	border-radius: .5em;*/
+}
+
+ }
